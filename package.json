@@ -1,0 +1,24 @@
+{
+  "name": "discord-notification-ts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rm -R ./dist && tsc"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^18.6.4",
+    "@types/yargs": "^17.0.11",
+    "axios": "^0.27.2",
+    "cli-progress": "^3.11.2",
+    "discord.js": "^14.1.2",
+    "discordx": "^11.0.8",
+    "dotenv": "^16.0.1",
+    "typescript": "^4.7.4",
+    "yargs": "^17.5.1"
+  }
+}
