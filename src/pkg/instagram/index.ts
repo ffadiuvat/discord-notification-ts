@@ -56,6 +56,7 @@ export default class Instagram {
     }
 
     if (this.keywords.length <= 0) {
+      this.cache.set(post.id, post.url);
       return true;
     }
 

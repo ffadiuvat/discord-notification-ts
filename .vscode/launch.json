@@ -8,10 +8,19 @@
       "type": "node",
       "request": "launch",
       "name": "Launch Program",
-      "program": "${workspaceFolder}/src/cli.ts",
-      "args": ["ig-notification", "thelazytitip", "-i", "5", "-k", "rtx", "-t", "15"],
+      "program": "${workspaceFolder}/src/index.ts",
+      "args": [
+        "ig-notification",
+        "thelazytitip",
+        "-i",
+        "5",
+        "-t",
+        "15"
+      ],
       "preLaunchTask": "tsc: build - tsconfig.json",
-      "outFiles": ["${workspaceFolder}/dist/**/*.js"],
+      "outFiles": [
+        "${workspaceFolder}/dist/**/*.js"
+      ],
       "outputCapture": "std"
     }
   ]
