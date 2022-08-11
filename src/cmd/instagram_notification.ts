@@ -51,9 +51,17 @@ export const handler = async (argv: Arguments) => {
       const guild = await app.discord?.getDefaultTextChannel();
       await poll(interval as number, timeout as number, async () => {
         console.log(`polling from instagram @${username}`);
-        const post = await ig.getLatestPostWithKeyword(username as string);
-        if (ig.shouldSendNotification(post)) {
-          guild?.send(`Silahkan check post ${post.url}`);
+        try {
+          const post = await ig.getLatestPostWithKeyword(username as string);
+          if (ig.shouldSendNotification(post)) {
+            guild?.send(`Silahkan check post ${post.url}`);
+          }
+        } catch (e: any) {
+          if (e.message == 'no latest post found') {
+            console.log('no post found');
+            return;
+          }
+          throw e;
         }
       });
     });

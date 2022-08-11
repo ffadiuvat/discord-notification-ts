@@ -11,7 +11,7 @@
       "program": "${workspaceFolder}/src/index.ts",
       "args": [
         "ig-notification",
-        "thelazytitip",
+        "ff.adiuvat",
         "-i",
         "5",
         "-t",

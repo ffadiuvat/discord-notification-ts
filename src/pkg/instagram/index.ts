@@ -42,6 +42,10 @@ export default class Instagram {
       },
     });
     const latestPost = result.data.items[0];
+    if (!latestPost) {
+      throw new Error('no latest post found');
+    }
+
     const postURL = `https://instagram.com/p/${latestPost.code}`;
     return {
       id: latestPost.id,
