@@ -1,7 +1,10 @@
-import { Discord } from '../../../src/pkg/bot';
-export class App {
+import { Discord } from '../bot';
+
+export default class App {
   public discord: Discord | undefined;
+
   private static instance: App;
+
   private constructor() {
     this.initBotClient();
   }
@@ -15,11 +18,11 @@ export class App {
   }
 
   private async initBotClient() {
-    this.discord = new Discord(process.env.DISCORD_DEFAULT_CHANNEL as string)
+    this.discord = new Discord(process.env.DISCORD_DEFAULT_CHANNEL as string);
     try {
       await this.discord.login(process.env.DISCORD_BOT_TOKEN as string);
     } catch (e) {
-      console.log(e)
+      console.log(e);
     }
   }
 }
