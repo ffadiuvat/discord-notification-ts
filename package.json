@@ -2,7 +2,9 @@
   "name": "@ffadiuvat/discord-notification",
   "version": "1.0.0-alpha",
   "description": "consolidated discord notification helper",
-  "main": "index.js",
+  "main": "dist/src/index.js",
+  "types": "dist/src/index.d.ts",
+  "bin": "dist/src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "rm -R ./dist && tsc",
@@ -41,13 +43,5 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "prettier": "^2.7.1",
     "typescript": "^4.7.4"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ffadiuvat/discord-notification-ts.git"
-  },
-  "bugs": {
-    "url": "https://github.com/ffadiuvat/discord-notification-ts/issues"
-  },
-  "homepage": "https://github.com/ffadiuvat/discord-notification-ts#readme"
+  }
 }
