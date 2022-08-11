@@ -5,8 +5,8 @@ type Options = {
   upper?: boolean
 }
 
-export const command: string = 'hello <name>'
-export const desc: string = 'Greet <name> with Hello'
+export const command = 'hello <name>'
+export const desc = 'Greet <name> with Hello'
 
 export const builder : CommandBuilder<Options, Options> = (yargs) =>
   yargs

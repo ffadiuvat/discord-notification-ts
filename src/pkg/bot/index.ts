@@ -1,3 +1,4 @@
-import { Discord } from './discord'
-export { Discord }
+import Discord from './discord';
+
+export { Discord };
 
